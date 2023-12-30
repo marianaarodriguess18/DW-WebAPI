@@ -1,0 +1,72 @@
+*{
+    background-color: #F2F2F2;
+    font-family: Barlow;
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    margin: 40px 100px;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 60px;
+}
+.header{
+    display: flex;
+    grid-column-start:1;
+    grid-column-end:4;
+    line-height: normal;
+    font-variant: small-caps;
+    font-size: 60pt;
+    font-weight: 800;
+    color: #9F0000;
+}
+.pesquisar{
+    display: flex;
+    grid-column-start:4;
+    grid-column-end:6;
+    padding: 6px;
+    margin-top: 50px;
+    font-size: 16px;
+    background-color: #e8e8e8;
+    border: solid 2px #a8a8a8;
+    border-radius: 10px;
+}
+
+.pesquisar input[type=text] {
+    border: none;
+    background-color: #e8e8e8;
+}
+
+#pesquisa{
+    border: none;
+    float: right;
+    align-items: end;
+    background-color: #e8e8e8;
+}
+
+#botaoOrdenar{
+    grid-column-start:5;
+    grid-column-end:6;
+    border: none;
+    background-color: #9F0000;
+    color: #F2F2F2;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 18px;
+}
+#livros{
+    display: contents;
+}
+.imagem{
+    width: 100%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+
+.texto{
+    font-size: 18px;
+    text-align: center;
+}
