@@ -63,6 +63,37 @@ botaoOrdenar.addEventListener('click', ordenarELivros);
 //fetchLivros();
 fetchAndDisplayLivros();
 
+
+function getObjectsByCategory(category) {
+    const url = `https://api.cosmicjs.com/v3/buckets/exercicio-2-production/objects?type=ivros&query=${category}`;
+  
+    return fetch(url, {
+      headers: {
+        Authorization: `Bearer ${readKey}`,
+      },
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Erro de resposta da API: ${response.status} - ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(data => data.objects)
+      .catch(error => {
+        console.error('Erro ao buscar objetos:', error.message);
+        throw error;
+      });
+  }
+  
+  // Exemplo de uso
+  const category = 'sua-categoria'; // Substitua pela categoria desejada
+  getObjectsByCategory(category)
+    .then(objects => {
+      console.log('Objetos encontrados:', objects);
+    })
+    .catch(error => {
+      console.error('Erro:', error.message);
+    });
 /*
 function pesquisarObjetos(){
     //limpar os resultados
