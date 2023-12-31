@@ -63,7 +63,7 @@ botaoOrdenar.addEventListener('click', ordenarELivros);
 //fetchLivros();
 fetchAndDisplayLivros();
 
-
+/*
 function getObjectsByCategory(category) {
     const url = `https://api.cosmicjs.com/v3/buckets/exercicio-2-production/objects?type=ivros&query=${category}`;
   
@@ -94,7 +94,7 @@ function getObjectsByCategory(category) {
     .catch(error => {
       console.error('Erro:', error.message);
     });
-/*
+
 function pesquisarObjetos(){
     //limpar os resultados
     document.getElementById('livros').innerHTML = "";
